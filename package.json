@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "games",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +15,9 @@
     "js",
     "games"
   ],
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "author": "vasilysmoolin",
   "license": "MIT",
   "bugs": {
