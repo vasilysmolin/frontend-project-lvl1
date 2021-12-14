@@ -1,4 +1,4 @@
-import { play, MIN_VALUE, MAX_VALUE } from '../engine.js';
+import { play, MIN_VALUE, MAX_VALUE } from '../index.js';
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
