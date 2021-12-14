@@ -4,7 +4,7 @@ const ROUND_COUNT = 3;
 const MIN_VALUE = 1;
 const MAX_VALUE = 10;
 
-export function play(description, generateRound) {
+function play(description, generateRound) {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -25,4 +25,10 @@ export function play(description, generateRound) {
   console.log(`Congratulations, ${name}`);
 }
 
-export { MIN_VALUE, MAX_VALUE };
+
+function getRandomArbitrary(min, max) {
+  const rand = min - 0.5 + Math.random() * (max - min + 1);
+  return Math.round(rand);
+}
+
+export { MIN_VALUE, MAX_VALUE, getRandomArbitrary, play };

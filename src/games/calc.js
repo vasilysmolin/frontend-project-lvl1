@@ -1,12 +1,7 @@
-import { play, MIN_VALUE, MAX_VALUE } from '../index.js';
+import { play, MIN_VALUE, MAX_VALUE, getRandomArbitrary } from '../index.js';
 
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATORS = ['+', '-', '*'];
-
-function getRandomArbitrary(min, max) {
-  const rand = min - 0.5 + Math.random() * (max - min + 1);
-  return Math.round(rand);
-}
 
 function OperatorsException(message) {
   this.message = message;
