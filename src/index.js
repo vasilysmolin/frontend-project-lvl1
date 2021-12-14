@@ -25,10 +25,11 @@ function play(description, generateRound) {
   console.log(`Congratulations, ${name}`);
 }
 
-
 function getRandomArbitrary(min, max) {
   const rand = min - 0.5 + Math.random() * (max - min + 1);
   return Math.round(rand);
 }
 
-export { MIN_VALUE, MAX_VALUE, getRandomArbitrary, play };
+export {
+  MIN_VALUE, MAX_VALUE, getRandomArbitrary, play,
+};

@@ -1,4 +1,6 @@
-import { play, MIN_VALUE, MAX_VALUE, getRandomArbitrary } from '../index.js';
+import {
+  play, MIN_VALUE, MAX_VALUE, getRandomArbitrary,
+} from '../index.js';
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
