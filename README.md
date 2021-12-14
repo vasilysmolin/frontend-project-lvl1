@@ -10,4 +10,4 @@
 
 1. Install project composer create-project vasilysmolin/frontend-project-lvl1
 
-2. Play any of the five games. Rules: Answer 3 questions correctly in a row or start the game over
+2. Play any of the five games. Rules: Answer 3 questions correctly in a row or start the game over.
