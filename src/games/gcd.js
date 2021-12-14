@@ -9,9 +9,9 @@ function gcd(n, m) {
   let secondNum = m;
   while (firstNum !== secondNum) {
     if (firstNum > secondNum) {
-      firstNum = firstNum - secondNum;
+      firstNum -= secondNum;
     } else {
-      secondNum = secondNum - firstNum;
+      secondNum -= firstNum;
     }
   }
   return firstNum;
