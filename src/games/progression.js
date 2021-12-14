@@ -23,7 +23,7 @@ export default function start() {
         answer = startStep + i * progressionStep;
       }
     }
-    const question = numbers.join(' ');
+    const question = numbers.join(' ').trim();
     return [question, answer.toString()];
   };
   play(DESCRIPTION, generateRound);
