@@ -12,12 +12,12 @@ function play(description, generateRound) {
 
   for (let roundNumber = 1; roundNumber <= ROUND_COUNT; roundNumber += 1) {
     const [question, answer] = generateRound();
-    console.log(`Question: ${question}!`);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === answer) {
       console.log('Correct!');
     } else {
-      console.log(`${userAnswer}! is wrong answer ;(. Correct answer was ${answer}`);
+      console.log(`${userAnswer}! is wrong answer ;(. Correct answer was ${answer}.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
