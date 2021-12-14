@@ -6,8 +6,7 @@ const DESCRIPTION = 'What is the result of the expression?';
 const OPERATORS = ['+', '-', '*'];
 
 function OperatorsException(message) {
-  this.message = message;
-  this.name = 'exception';
+  return message;
 }
 
 function calculate(numberOne, numberTwo, operator) {
