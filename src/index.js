@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-const ROUND_COUNT = 3;
-const MIN_VALUE = 1;
-const MAX_VALUE = 10;
+const roundsCount = 3;
+const minValue = 1;
+const maxValue = 10;
 
 function play(description, generateRound) {
   console.log('Welcome to the Brain Games!');
@@ -10,7 +10,7 @@ function play(description, generateRound) {
   console.log(`Hello, ${name}!`);
   console.log(`${description}!`);
 
-  for (let roundNumber = 1; roundNumber <= ROUND_COUNT; roundNumber += 1) {
+  for (let roundNumber = 1; roundNumber <= roundsCount; roundNumber += 1) {
     const [question, answer] = generateRound();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
@@ -25,11 +25,6 @@ function play(description, generateRound) {
   console.log(`Congratulations, ${name}!`);
 }
 
-function getRandomArbitrary(min, max) {
-  const rand = min - 0.5 + Math.random() * (max - min + 1);
-  return Math.round(rand);
-}
-
 export {
-  MIN_VALUE, MAX_VALUE, getRandomArbitrary, play,
+  minValue, maxValue, play,
 };

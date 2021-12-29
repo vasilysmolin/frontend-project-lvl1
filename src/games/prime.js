@@ -1,6 +1,8 @@
 import {
-  play, MIN_VALUE, MAX_VALUE, getRandomArbitrary,
+  play, minValue, maxValue,
 } from '../index.js';
+
+import getRandomArbitrary from '../utils.js';
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -8,7 +10,7 @@ function isPrime(num) {
   if (num === 2) {
     return true;
   }
-  if (num % 2 === 0 || num === 1) {
+  if (num % 2 === 0 || num < 2) {
     return false;
   }
   let i = 3;
@@ -24,7 +26,7 @@ function isPrime(num) {
 
 export default function start() {
   const generateRound = () => {
-    const question = getRandomArbitrary(MIN_VALUE, MAX_VALUE);
+    const question = getRandomArbitrary(minValue, maxValue);
     const answer = isPrime(question) ? 'yes' : 'no';
     return [question, answer];
   };

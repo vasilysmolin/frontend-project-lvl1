@@ -1,6 +1,8 @@
 import {
-  play, MIN_VALUE, MAX_VALUE, getRandomArbitrary,
+  play, minValue, maxValue,
 } from '../index.js';
+
+import getRandomArbitrary from '../utils.js';
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -10,7 +12,7 @@ function isEven(number) {
 
 export default function start() {
   const generateRound = () => {
-    const question = getRandomArbitrary(MIN_VALUE, MAX_VALUE);
+    const question = getRandomArbitrary(minValue, maxValue);
     const answer = isEven(question) ? 'yes' : 'no';
     return [question, answer];
   };
